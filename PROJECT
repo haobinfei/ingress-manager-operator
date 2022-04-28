@@ -1,0 +1,16 @@
+domain: bigops.com.cn
+layout:
+- go.kubebuilder.io/v3
+projectName: ingress-manager-operator
+repo: github.com/haobinfei/ingress-manager-operator
+resources:
+- api:
+    crdVersion: v1
+    namespaced: true
+  controller: true
+  domain: bigops.com.cn
+  group: cloud
+  kind: IngressManager
+  path: github.com/haobinfei/ingress-manager-operator/api/v1
+  version: v1
+version: "3"

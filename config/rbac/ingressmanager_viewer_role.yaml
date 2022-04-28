@@ -1,0 +1,20 @@
+# permissions for end users to view ingressmanagers.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: ingressmanager-viewer-role
+rules:
+- apiGroups:
+  - cloud.bigops.com.cn
+  resources:
+  - ingressmanagers
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - cloud.bigops.com.cn
+  resources:
+  - ingressmanagers/status
+  verbs:
+  - get

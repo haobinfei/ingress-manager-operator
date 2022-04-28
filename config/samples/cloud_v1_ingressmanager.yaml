@@ -1,0 +1,6 @@
+apiVersion: cloud.bigops.com.cn/v1
+kind: IngressManager
+metadata:
+  name: ingressmanager-sample
+spec:
+  # TODO(user): Add fields here

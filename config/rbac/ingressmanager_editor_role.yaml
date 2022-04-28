@@ -1,0 +1,24 @@
+# permissions for end users to edit ingressmanagers.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: ingressmanager-editor-role
+rules:
+- apiGroups:
+  - cloud.bigops.com.cn
+  resources:
+  - ingressmanagers
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - cloud.bigops.com.cn
+  resources:
+  - ingressmanagers/status
+  verbs:
+  - get
